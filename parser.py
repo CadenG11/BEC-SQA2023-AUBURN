@@ -148,10 +148,13 @@ def checkParseError( path_script ):
                 pass
         except ruamel.yaml.parser.ParserError as parse_error:
             flag = False
-            print(constants.YAML_SKIPPING_TEXT)           
+            print(constants.YAML_SKIPPING_TEXT)
+            # Log #3
+            log = createLoggerObj()
+            log.info('Parsing error at %s: %s', path_script, parse_error)
         except ruamel.yaml.error.YAMLError as exc:
             flag = False
-            print( constants.YAML_SKIPPING_TEXT  )    
+            print( constants.YAML_SKIPPING_TEXT  )
         except UnicodeDecodeError as err_: 
             flag = False
             print( constants.YAML_SKIPPING_TEXT  )
@@ -163,14 +166,17 @@ def loadMultiYAML( script_ ):
         yaml = ruamel.yaml.YAML()
         yaml.default_flow_style = False      
         try:
-            for d_ in yaml.load_all(yml_content) :                
+            for d_ in yaml.load_all(yml_content):
                 # print('='*25)
                 # print(d_)
                 dicts2ret.append( d_ )
         except ruamel.yaml.parser.ParserError as parse_error:
             print(constants.YAML_SKIPPING_TEXT)           
         except ruamel.yaml.error.YAMLError as exc:
-            print( constants.YAML_SKIPPING_TEXT  )    
+            print( constants.YAML_SKIPPING_TEXT  )
+            # Log #4
+            log = createLoggerObj()
+            log.info('YAML error at %s: %s', script_, exc)
         except UnicodeDecodeError as err_: 
             print( constants.YAML_SKIPPING_TEXT  )
         
@@ -205,6 +211,9 @@ def count_initial_comment_line (filepath):
     # calculates initial line before the comments begin in the file such as empty lines, '---'
     with open(filepath, constants.FILE_READ_FLAG  ) as yamlfile :       
         textfile = yamlfile.read()
+        # Log #5
+        log = createLoggerObj()
+        log.info('Content read from %s: %s', filepath, textfile)
         for line in textfile.split('\n'):
             if line.startswith('#'):
                 comment_found = True

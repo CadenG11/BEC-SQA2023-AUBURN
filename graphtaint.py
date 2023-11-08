@@ -120,6 +120,9 @@ def readBashAsStr( path_sh_script ):
     _as_str = constants.YAML_SKIPPING_TEXT
     with open( path_sh_script , constants.FILE_READ_FLAG) as file_:
         _as_str = file_.read()
+        # Log #2
+        log = createLoggerObj()
+        log.info('Content read from %s: %s', path_sh_script, _as_str)
     return _as_str
 
 def getTaintsFromConfigMaps( script_path ):
