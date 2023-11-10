@@ -1,0 +1,6 @@
+#!/bin/sh
+echo "Running bandit on project"
+
+bandit -r . -f csv -o "BanditResults.csv"
+
+echo "Report available at BanditResults.csv"

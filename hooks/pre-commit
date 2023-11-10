@@ -1,8 +1,0 @@
-#!/bin/sh
-echo "Running bandit on changed python files..."
-
-changed_files="$(git diff --cached --name-only -- "*.py")"
-
-bandit -r $changed_files -f csv -o "BanditResults.csv"
-
-echo "Report available at BanditResults.csv"
