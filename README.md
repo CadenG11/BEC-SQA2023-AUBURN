@@ -2,6 +2,6 @@
 
 # Team BEC
 
-Caden Garrett
-Emily Kimbrell
+Caden Garrett\
+Emily Kimbrell\
 Braden Mosley
