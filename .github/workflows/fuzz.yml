@@ -11,5 +11,4 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Run Python script
-      run: pip install -f requirements.txt
-      run: python fuzz.py
+      run: pip install -f requirements.txt && python fuzz.py
