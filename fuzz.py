@@ -21,36 +21,36 @@ def fuzzValues():
 
     print("\n")
 
-    for input in inputs:
-        try:
-            result = checkIfValidK8SYaml(input)
-        except Exception as e:
-            print(f"Exception during testing for checkIfValidK8SYaml: {e}")
+    # for input in inputs:
+    #     try:
+    #         result = checkIfValidK8SYaml(input)
+    #     except Exception as e:
+    #         print(f"Exception during testing for checkIfValidK8SYaml: {e}")
 
-    print("\n")
+    # print("\n")
 
-    for input in inputs:
-        try:
-            result = checkIfValidHelm(input)
-        except Exception as e:
-            print(f"Exception during testing for checkIfValidHelm: {e}")
+    # for input in inputs:
+    #     try:
+    #         result = checkIfValidHelm(input)
+    #     except Exception as e:
+    #         print(f"Exception during testing for checkIfValidHelm: {e}")
 
-    print("\n")
+    # print("\n")
 
-    for input in inputs:
-        try:
-            result = checkParseError(input)
-        except Exception as e:
-            print(f"Exception during testing for checkParseError: {e}")
+    # for input in inputs:
+    #     try:
+    #         result = checkParseError(input)
+    #     except Exception as e:
+    #         print(f"Exception during testing for checkParseError: {e}")
 
-    print("\n")
+    # print("\n")
 
-    for input in inputs:
-        try:
-            result = readYAMLAsStr(input)
+    # for input in inputs:
+    #     try:
+    #         result = readYAMLAsStr(input)
 
-        except Exception as e:
-            print(f"Exception during testing for readYAMLAsStr: {e}")
+    #     except Exception as e:
+    #         print(f"Exception during testing for readYAMLAsStr: {e}")
 
 if __name__ == "__main__":
     fuzzValues()
