@@ -6,7 +6,7 @@ Test Utilities for Parsing
 
 import unittest 
 import TEST_CONSTANTS 
-import parser_1
+import parser
 
 class TestParsing( unittest.TestCase ):
 

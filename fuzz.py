@@ -4,7 +4,7 @@ to identify security vulnerabilities, stability issues, or
 other unexpected behaviors in software applications.
 '''
 
-from parser_1 import checkIfWeirdYAML, checkIfValidK8SYaml, checkIfValidHelm, checkParseError, readYAMLAsStr
+from parser import checkIfWeirdYAML, checkIfValidK8SYaml, checkIfValidHelm, checkParseError, readYAMLAsStr
 
 def fuzzValues():
     inputs = [
