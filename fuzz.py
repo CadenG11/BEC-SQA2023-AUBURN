@@ -52,4 +52,5 @@ def fuzzValues():
         except Exception as e:
             print(f"Exception during testing for readYAMLAsStr: {e}")
 
-fuzzValues()
+if __name__ == "__main__":
+    fuzzValues()
