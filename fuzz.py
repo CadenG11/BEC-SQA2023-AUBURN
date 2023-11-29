@@ -5,6 +5,7 @@ other unexpected behaviors in software applications.
 '''
 
 from parser import checkIfWeirdYAML, checkIfValidHelm, update_json_paths, getSingleDict4MultiDocs
+from graphtaint import getValidTaints
 
 def fuzzValues():
     inputs = [
@@ -44,6 +45,12 @@ def fuzzValues():
             print(f"Exception during testing for getSingleDict4MultiDocs: {e}")
 
     print("\n")
+
+    for input in inputs:
+        try:
+            result = getValidTaints(input)
+        except Exception as e:
+            print(f"Exception during testing for getValidTaints: {e}")
 
 if __name__ == "__main__":
     fuzzValues()
