@@ -4,7 +4,7 @@ to identify security vulnerabilities, stability issues, or
 other unexpected behaviors in software applications.
 '''
 
-from parser import checkIfWeirdYAML, checkIfValidHelm, update_json_paths 
+from parser import checkIfWeirdYAML, checkIfValidHelm, count_initial_comment_line, update_json_paths 
 
 def fuzzValues():
     inputs = [
@@ -26,6 +26,14 @@ def fuzzValues():
             result = checkIfValidHelm(input)
         except Exception as e:
             print(f"Exception during testing for checkIfValidHelm: {e}")
+
+    print("\n")
+
+    for input in inputs:
+        try:
+            result = count_initial_comment_line(input)
+        except Exception as e:
+            print(f"Exception during testing for count_initial_comment_line: {e}")
 
     print("\n")
 
