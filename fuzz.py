@@ -19,9 +19,9 @@ def fuzzValues():
         except Exception as e:
             print(f"Exception during testing for checkIfWeirdYAML: {e}")
 
-    #maybe causing issues
-    # print("\n")
+    print("\n")
 
+    #maybe causing issues
     # for input in inputs:
     #     try:
     #         result = checkIfValidK8SYaml(input)
@@ -38,20 +38,21 @@ def fuzzValues():
 
     print("\n")
 
-    for input in inputs:
-        try:
-            result = checkParseError(input)
-        except Exception as e:
-            print(f"Exception during testing for checkParseError: {e}")
-
-    print("\n")
-
+    #may also be causing issues
     # for input in inputs:
     #     try:
-    #         result = readYAMLAsStr(input)
-
+    #         result = checkParseError(input)
     #     except Exception as e:
-    #         print(f"Exception during testing for readYAMLAsStr: {e}")
+    #         print(f"Exception during testing for checkParseError: {e}")
+
+    # print("\n")
+
+    for input in inputs:
+        try:
+            result = readYAMLAsStr(input)
+
+        except Exception as e:
+            print(f"Exception during testing for readYAMLAsStr: {e}")
 
 if __name__ == "__main__":
     fuzzValues()
