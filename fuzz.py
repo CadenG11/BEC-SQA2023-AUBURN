@@ -19,23 +19,24 @@ def fuzzValues():
         except Exception as e:
             print(f"Exception during testing for checkIfWeirdYAML: {e}")
 
-    print("\n")
-
-    for input in inputs:
-        try:
-            result = checkIfValidK8SYaml(input)
-        except Exception as e:
-            print(f"Exception during testing for checkIfValidK8SYaml: {e}")
-
-    print("\n")
+    #maybe causing issues
+    # print("\n")
 
     # for input in inputs:
     #     try:
-    #         result = checkIfValidHelm(input)
+    #         result = checkIfValidK8SYaml(input)
     #     except Exception as e:
-    #         print(f"Exception during testing for checkIfValidHelm: {e}")
+    #         print(f"Exception during testing for checkIfValidK8SYaml: {e}")
 
     # print("\n")
+
+    for input in inputs:
+        try:
+            result = checkIfValidHelm(input)
+        except Exception as e:
+            print(f"Exception during testing for checkIfValidHelm: {e}")
+
+    print("\n")
 
     # for input in inputs:
     #     try:
