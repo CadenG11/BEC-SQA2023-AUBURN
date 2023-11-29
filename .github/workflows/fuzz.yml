@@ -8,7 +8,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@main
 
     - name: Run Python script
-      run: pip install -r requirements.txt && python fuzz.py
+      run: python fuzz.py
