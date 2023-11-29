@@ -38,13 +38,13 @@ def fuzzValues():
 
     print("\n")
 
-    # for input in inputs:
-    #     try:
-    #         result = checkParseError(input)
-    #     except Exception as e:
-    #         print(f"Exception during testing for checkParseError: {e}")
+    for input in inputs:
+        try:
+            result = checkParseError(input)
+        except Exception as e:
+            print(f"Exception during testing for checkParseError: {e}")
 
-    # print("\n")
+    print("\n")
 
     # for input in inputs:
     #     try:
