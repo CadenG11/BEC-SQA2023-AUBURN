@@ -4,7 +4,7 @@ to identify security vulnerabilities, stability issues, or
 other unexpected behaviors in software applications.
 '''
 
-from parser import checkIfWeirdYAML, checkIfValidHelm, checkParseError
+from parser import checkIfWeirdYAML, checkIfValidHelm, loadMultiYAML
 
 def fuzzValues():
     inputs = [
@@ -31,9 +31,9 @@ def fuzzValues():
 
     for input in inputs:
         try:
-            result = checkParseError(input)
+            result = loadMultiYAML(input)
         except Exception as e:
-            print(f"Exception during testing for checkParseError: {e}")
+            print(f"Exception during testing for loadMultiYAML: {e}")
 
     print("\n")
 
