@@ -21,13 +21,13 @@ def fuzzValues():
 
     print("\n")
 
-    # for input in inputs:
-    #     try:
-    #         result = checkIfValidK8SYaml(input)
-    #     except Exception as e:
-    #         print(f"Exception during testing for checkIfValidK8SYaml: {e}")
+    for input in inputs:
+        try:
+            result = checkIfValidK8SYaml(input)
+        except Exception as e:
+            print(f"Exception during testing for checkIfValidK8SYaml: {e}")
 
-    # print("\n")
+    print("\n")
 
     # for input in inputs:
     #     try:
