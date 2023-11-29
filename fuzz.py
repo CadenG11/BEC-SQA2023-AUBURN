@@ -4,8 +4,7 @@ to identify security vulnerabilities, stability issues, or
 other unexpected behaviors in software applications.
 '''
 
-from parser import checkIfWeirdYAML, checkIfValidHelm
-from scanner import isValidUserName
+from parser import checkIfWeirdYAML, checkIfValidHelm, checkIfValidK8SYaml
 
 def fuzzValues():
     inputs = [
@@ -32,9 +31,9 @@ def fuzzValues():
 
     for input in inputs:
         try:
-            result = isValidUserName(input)
+            result = checkIfValidK8SYaml(input)
         except Exception as e:
-            print(f"Exception during testing for isValidUserName: {e}")
+            print(f"Exception during testing for checkIfValidK8SYaml: {e}")
 
     print("\n")
 
